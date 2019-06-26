@@ -1,0 +1,23 @@
+{% extends '../layouts/layout.html' %}
+
+{% block title %}
+热门歌单
+{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="/css/index.css">
+{% endblock %}
+
+{% block content %}
+<h1>热门歌单</h1>
+<ul class="list-wrap">
+{% for val in data %}
+    <li class="lb-box">
+        <p>
+            <img width="120" src="{{val.coverImgUrl}}" >
+        </p>
+        <p>{{val.name}}</p>
+    </li>
+{% endfor %}
+</ul>
+{% endblock %}
